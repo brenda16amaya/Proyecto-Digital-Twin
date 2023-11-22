@@ -30,6 +30,7 @@ layout = dbc.Container([  # Se crea un contenedor de Dash que señala los elemen
 ])
 
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP]) # Crear una instancia de la aplicación Dash
+server = app.server
 app.layout = layout
 
 
