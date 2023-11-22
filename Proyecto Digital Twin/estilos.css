@@ -1,0 +1,11 @@
+/* Estilo para los tabs activos */
+.active {
+    background-color: blue !important; /* Cambia el color de fondo a azul */
+    color: white !important; /* Cambia el color del texto a blanco */
+}
+
+/* Estilo para los tabs inactivos */
+.nav-item {
+    background-color: green !important; /* Cambia el color de fondo a verde */
+    color: white !important; /* Cambia el color del texto a blanco */
+}

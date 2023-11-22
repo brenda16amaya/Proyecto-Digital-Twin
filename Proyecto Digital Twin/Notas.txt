@@ -1,0 +1,4 @@
+Colores 
+
+Color encabezado principal 
+color columnas principales
