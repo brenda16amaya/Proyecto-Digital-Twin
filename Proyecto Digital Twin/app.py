@@ -8,6 +8,10 @@ from frontend.derecho.derecho import *  # Importar la variable "derecho" de la c
 from frontend.izquierdo.izquierdo import *    # Importar la variable "izquierdo" de la carpeta del frontend
 from frontend.inferior.inferior import inferior    # Importar la variable "inferior" de la carpeta del frontend
 
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP]) # Crear una instancia de la aplicación Dash
+server = app.server
+app.layout = layout
+
 # Crear el diseño de la página web
 layout = dbc.Container([  # Se crea un contenedor de Dash que señala los elementos que contendrán la página.
     dbc.Row([  # Crear una fila para el encabezado
@@ -28,11 +32,6 @@ layout = dbc.Container([  # Se crea un contenedor de Dash que señala los elemen
     ),
     html.Div(id='alerta-texto', style={'text-align': 'center', 'margin-top': '10px'})
 ])
-
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP]) # Crear una instancia de la aplicación Dash
-server = app.server
-app.layout = layout
-
 
 #Base de datos
 from pymongo.mongo_client import MongoClient
